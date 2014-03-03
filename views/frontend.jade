@@ -1,0 +1,124 @@
+extends layout
+
+block content
+	.modal.fade(id='modal' tabindex='-1' role='dialog' aria-labelledby='modalLabel' aria-hidden='true')
+		.modal-dialog.modal-lg
+			.modal-content
+	.container
+		nav.navbar-default.navbar-fixed-top(role='navigation')
+			.container
+				.navbar-header
+					button.navbar-toggle(type='button' data-toggle='collapse' data-target='.navbar-collapse')
+						span.sr-only Toggle Navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					
+				a.navbar-brand.logo-nav(href='/frontend') GE Healthcare
+				.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li.active
+							a(href='/frontend')
+								span.glyphicon.glyphicon-home
+								|     Home
+						li
+							a.dropdown-toggle(href='#' data-toggle='dropdown')
+								span.glyphicon.glyphicon-wrench
+								|     Service Requests
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href='/createServiceRequest') Create Service Request
+								li
+									a(href='viewServiceRequests') View Service Requests
+						li
+							a.dropdown-toggle(href='#' data-toggle='dropdown')
+								span.glyphicon.glyphicon-eye-open
+								|     My Equipment 
+								b.caret
+							ul.dropdown-menu
+								li
+									a(href='/equipment') View My Equipment
+								li
+									a(href='/reports') View reports
+					form.navbar-form.navbar-right(action='/logout')
+						button(type='submit' class='btn tn-default') Logout
+
+	.container
+		.jumbotron
+			h3 Hospital Materdei
+			p Hello Mr Anderson,
+			p Today is a wonderful day! :)
+
+	.container.content
+		block body
+			.h3.text-center Dashboard
+			.panel.panel-primary.table-responsive
+					.panel-heading.text-center Open Service Orders
+					.panel-body.no-margin.no-padding
+						.table-responsive
+							table.table.table-striped.table-hover.no-padding.no-margin
+								thead
+									tr
+										th.text-center Service Order
+										th.text-center Equipment
+										th.text-center Product
+										th.text-center Date Service Requested
+										th.text-center Problem type
+										th.text-center Status
+								tbody
+									tr
+										td 
+											a(data-toggle='modal' href='/servicedetails?id=411339' data-target='#modal') 411339
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+									tr
+										td
+											a(data-toggle='modal' href='/servicedetails' data-target='#modal') 123123
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+									tr
+										td
+											a(data-toggle='modal' href='/servicedetails' data-target='#modal') 123123
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum	
+									tr
+										td
+											a(data-toggle='modal' href='/servicedetails' data-target='#modal') 123123
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum	
+									tr
+										td 
+											a(data-toggle='modal' href='/servicedetails' data-target='#modal') 123123
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+										td lorem ipsum
+	footer
+		.container
+			.row
+				.col-xs-4
+					img(src='images/ge_logo.jpg' height='50px')
+				.col-xs-4
+					ul.nav.nav-pills
+						li.active
+							a(href='/aboutus') About Us
+						li
+							a(href='/support') Support 24x7
+						li
+							a(href='/privacy') Privacy Policy
+				.col-xs-4
+					h4.text-right GE Healthcare Service Portal

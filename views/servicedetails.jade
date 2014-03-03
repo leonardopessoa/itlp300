@@ -1,0 +1,89 @@
+.modal-header
+	button.close(type='button' data-dismiss='modal' aria-hidden='true') x 
+	h4.modalLabel.modal-title
+	| Service Details
+.modal-body
+	h2.text-center Waiting For Customer Approval
+	.container-fluid
+		.row
+			.col-xs-12
+				i Service Order Placed in: April 1, 2013
+				br
+				br
+		.row
+			.col-xs-6 
+				span.glyphicon.glyphicon-info-sign.geblue
+				strong  Problem Type:
+				|  #{serviceorder.ProblemTypeDescription}
+				br
+				span.glyphicon.glyphicon-warning-sign.geblue
+				strong  Priority:
+				|  #{serviceorder.PriorityDescription}
+				br
+				span.glyphicon.glyphicon-user.geblue
+				strong  Created by:
+				|  #{serviceorder._CreatedBy.FirstName} #{serviceorder._CreatedBy.LastName}
+				br
+				span.glyphicon.glyphicon-phone.geblue
+				strong  Customer Name:  
+				button.btn.default(id='customer_pop' data-toggle='popover' data-placement='right' data-content='Details about United States of America President! OMG!!!')
+					| Barack Obama
+				script
+					$('#customer_pop').popover();
+
+				br
+				h4 Problem Notes:
+				.panel.panel-primary
+					.panel-body View of image no longer displays
+
+				.panel.panel-primary
+					.panel-heading Replacement Parts Required
+					.panel-body.no-margin.no-padding
+						.table-responsive
+							table.table.table-striped.table-hover.no-padding.no-margin
+								thead
+									tr
+										th Part Number
+										th Part Description
+										th Quantity
+										th Part Cost
+								tbody
+									tr
+										td US8DUA
+										td Xray whatever
+										td 8
+										td 8921.23
+									tr
+										td IS9IDF
+										td MRI new new
+										td 2
+										td 9841.24
+									tr
+										td I9SIKF
+										td CT good
+										td 4
+										td 1232.45
+
+			.col-xs-6 
+				h3.text-center Action History
+				.panel-group#accordion
+					.panel.panel-primary
+						.panel-heading
+							h4.panel-title
+								a(data-toggle='collapse' data-parent='#accordion' href='#collapseOne')
+									| Action 1
+						#collapseOne.panel-collapse.collapse
+							.panel-body
+								| Teste de action 1
+				.panel-group#accordion
+					.panel.panel-primary
+						.panel-heading
+							h4.panel-title
+								a(data-toggle='collapse' data-parent='#accordion' href='#collapse1')
+									| Action 2
+						#collapse1.panel-collapse.collapse
+							.panel-body
+								| Teste de action 2
+
+.modal-footer
+	button.btn.btn-primary(type='button' data-dismiss='modal') Close

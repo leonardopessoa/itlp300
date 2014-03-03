@@ -1,0 +1,69 @@
+@import url('/stylesheets/bootstrap.min.css');
+@import url('/stylesheets/bootstrap-theme.min.css');
+
+.jumbotron {
+	margin-top: 40px;
+	color: #FFFFFF;
+	text-shadow: 0px 0px 2px #888888;
+	background-image:url(/images/healthcare.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.jumbotron h3 {
+	font-family: 'GE Inspira','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	color: #333;
+	text-shadow: 0px 0px 2px #999;
+	opacity: 1;
+}
+
+.jumbotron p {
+	font-family: 'GE Inspira','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	color: #333;
+}
+
+.navbar-default .navbar-brand {
+	font-family: 'GE Inspira','Helvetica Neue',Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	color: #23A7DE;
+}
+
+.table thead {
+	color: #23A7DE;
+	background: #F5F5F5;
+}
+
+h3.text-center.blue, h4.text-center.blue {
+	background: #1296bc;
+	margin-bottom: 0px;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+button.close {
+	margin-right: 10px;
+	margin-top: -3px;
+}
+
+.glyphicon.geblue {
+	color: #099fc0;
+}
+
+.no-padding {
+	padding: 0px;
+}
+.no-margin {
+	margin: 0px;
+}
+
+.navbar-default {
+	background-image: linear-gradient(to bottom, #fff 0, #eee 100%);
+}
+
+.content {
+	margin-top: -30px;
+}
